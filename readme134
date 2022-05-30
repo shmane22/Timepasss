@@ -1,0 +1,33 @@
+Mendix apps have three security levels:
+
+Off: there is no security in place. Anyone can use the app and they don’t have to log in to do so. This is the default setting when you create a new app.
+
+Prototype/Demo: this level requires you to set up Page access and Microflow access. You must define who can visit what page and who can trigger which microflow. This security level is useful for quickly checking (or demoing) your security, for example, what the app looks like for a particular user?
+
+Production: this is where you configure the Entity access. Here you determine whether someone can create objects (like a training event) and whether they can delete objects. You also determine whether someone can see the information inside an object and whether they can change that information.
+
+Page Access
+Page access defines which pages can be accessed. The navigation items (menu bars/buttons) will show items only if access is granted.
+
+The Page access settings are displayed as a matrix showing pages and modules roles. For each combination, you can indicate if the module role has access to the page. You can also edit this information while editing a page using the Visible for setting in the page’s properties
+
+Note that this configuration is only applied to public pages when they are opened directly from the client. A page that is opened by a microflow will only open if the role is allowed to execute the microflow.
+
+ 
+
+Microflow Access
+Microflow access defines which microflows can be used. The navigation items (menu bars/buttons) will show items only if access is granted.
+
+Microflow access uses an identical matrix to show microflows and modules roles. For each combination you can indicate if the module role has access to the microflow. You can also edit this information while editing a microflow using the Allowed roles property. 
+
+Note that these access settings are only checked when the microflow is executed from the client. A microflow called as a sub-microflow or a microflow set as an event handler will be run if the user has access to the calling microflow or if the related entity event is allowed for the user. 
+
+ 
+
+Entity Access
+Entity access defines for each module role whether users are authorized to Create, Read, Update, and Delete (CRUD) objects of the entity. Read means whether you can see the information, Update whether you can change it.
+
+Entity access is configured with access rules that are applied to entities. Each access rule in turn is applied to one or more module roles.
+
+The access rules of an entity define what a user is allowed to do with objects of that entity. Users can be allowed to create and delete objects, and to view and edit member values. A member is an attribute or association. Furthermore, the set of objects available for viewing, editing and removing can be limited by means of an XPath constraint.
+
