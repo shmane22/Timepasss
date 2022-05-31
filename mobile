@@ -1,0 +1,19 @@
+When you aim to implement a mobile app, the first question to ask is: will you want to publish the app in mobile app stores, or should it be browser based? Knowing if your app needs to be app store-based or browser-based will make it much easier to determine which underlying technology you’ll be using as a backbone. 
+
+PWA is a web-app technology with a Native shell around it. Because of this, it has a few advantages over Hybrid. PWA apps behave like native apps in that they are ‘installed’ on a mobile device’s home screen, can be run offline, and don’t run in a browser window, but underneath they are just as flexible and easy to maintain as web apps. Unlike app store-based apps, you don’t need to download a PWA from your app store, but can immediately access it through an internet connection. In essence, a PWA combines the desirable aspects of both technologies!  
+
+Why PWA? 
+
+Progressive Web Apps can be characterized by three main properties: they are installable, reliable, and capable.  
+
+Installable - Once you open a PWA, you’ll be prompted to add it to your home screen. If you accept, it will be installed on your home screen with an icon. When starting your app this way, the app will run in the default installed browser, but the browser bar and app itself will be hidden, delivering a standalone, native-like experience. 
+
+Reliable - PWA can work offline or partially offline. Even if you don’t have an Internet connection, it is possible to run your app offline once it has been installed. 
+
+Capable - PWA can leverage device functionality like navigation, making phone calls, or taking pictures. With some browsers, it is even possible to use functionality like Bluetooth or NFC. Depending on the functionality supported by the browser, you can progressively use more advanced features. 
+
+
+When creating mobile pages, in addition to microflows you may want to use nanoflows. Nanoflows are similar to microflows, in that they allow you to express the logic of your application. Nanoflows do have some specific benefits for mobile. For example, they run directly on the browser/device and can be used in an offline app. Furthermore, most of the actions run directly on the device, so there is also a speed benefit for logic that does not need access to the server.
+Nanoflows are designed with offline-first applications in mind, as they allow you to model application logic that works in offline apps. Since all database-related actions will be executed on the local offline database, nanoflows in offline apps will be fast.
+There are some differences in the way nanoflows and microflows are created and executed. Both microflows and nanoflows are based on BPMN. The major elements used to construct a microflow are similar to the ones in nanoflows. There is a difference in the types of activities you can use in microflows and nanoflows. Some actions available in microflows are not available in nanoflows, and vice versa. Currently, step-by-step debugging is not available in nanoflows. As an alternative, a log message activity can be used inside of nanoflows, which will be shown in the console of Studio Pro.   
+
